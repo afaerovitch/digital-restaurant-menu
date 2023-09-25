@@ -59,6 +59,7 @@ header:after {
     position: fixed;
     top: 70px;
     left: -100vw;
+    padding-top: 5vh;
     padding-bottom: 50vh;
     opacity: 0;
     gap: 0;
@@ -82,6 +83,7 @@ header:after {
     font-size: 2em;
     text-decoration: none;
     font-family: MADE SAONARA, sans-serif;
+    text-transform: uppercase;
 }
 
 /* Hamburger */
@@ -139,6 +141,7 @@ header:after {
     font-family: MADE SAONARA, sans-serif;
     font-weight: normal;
     font-size: 2em;
+    text-transform: uppercase;
     text-align: center;
     color: var(--menu-header-color);
     scroll-margin-top: 100px;
