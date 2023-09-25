@@ -1,0 +1,203 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Color Palette */
+:root {
+    --background-color: #282e2d;
+    --menu-header-color: white;
+    --menu-border-color: #d69675;
+    --menu-item-color: white;
+}
+
+/* Fonts */
+
+@font-face {
+    font-family: MADE SAONARA;
+    src: url("fonts/MADE\ SAONARA\ PERSONAL\ USE.otf") format("opentype");
+}
+
+/* HTML Smooth Scrolling */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Body */
+
+body {
+    background-color: var(--background-color);
+}
+
+/* Navigation Menu */
+
+header {
+    background-color: var(--background-color);
+}
+
+header:after {
+    content: "";
+    display: block;
+    height: 70px;
+    width: 100%;
+}
+
+.navbar {
+    min-height: 70px;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    gap: 60px;
+    background-color: var(--background-color);
+}
+
+.nav-menu {
+    display: flex;
+    position: fixed;
+    top: 70px;
+    left: -100vw;
+    padding-bottom: 50vh;
+    opacity: 0;
+    gap: 0;
+    flex-direction: column;
+    background-color: var(--background-color);
+    width: 100%;
+    height: calc(100% - 70px);
+    text-align: center;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    align-items: center;
+}
+
+.nav-item {
+    list-style: none;
+    margin: auto;
+}
+
+.nav-link {
+    color: white;
+    font-size: 2em;
+    text-decoration: none;
+    font-family: MADE SAONARA, sans-serif;
+}
+
+/* Hamburger */
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+    margin: auto 26px;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 1px;
+    margin: 7px auto;
+    background-color: #fff;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Hamburger Transition */
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Navigation Menu Transition */
+
+.nav-menu.active {
+    left: 0;
+    opacity: 100%;
+}
+
+/* Owl's Nest Logo */
+
+.logo {
+    position: fixed;
+    height: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Restaurant Menu */
+
+.menu-header {
+    font-size: 2em;
+    font-family: MADE SAONARA, sans-serif;
+    font-weight: normal;
+    font-size: 2em;
+    text-align: center;
+    color: var(--menu-header-color);
+    scroll-margin-top: 100px;
+}
+
+.menu-header:first-of-type {
+    margin-top: 70px;
+}
+
+.menu-list {
+    margin: 10vw;
+    padding: 1em;
+    border: var(--menu-border-color) solid;
+}
+
+.menu-item {
+    list-style-type: none;
+    cursor: pointer;
+    margin-top: 1em;
+    color: var(--menu-item-color);
+    font-family: Garamond, sans-serif;
+    border-bottom: var(--menu-border-color) solid;
+    overflow: hidden;
+    max-height: 2em;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.menu-item:first-child {
+    margin-top: 0;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item-name {
+    float: left;
+}
+
+.menu-item-price {
+    float: right;
+}
+
+.menu-item-image {
+    width: 100%;
+    height: auto;
+    margin: 1em auto;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Menu Item Transition */
+
+.menu-item.active {
+    max-height: 500px;
+}
+
+.menu-item.active .menu-item-image {
+    opacity: 100%;
+}
