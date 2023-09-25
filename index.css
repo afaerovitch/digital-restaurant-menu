@@ -178,6 +178,20 @@ header:after {
     border-bottom: none;
 }
 
+.arrow {
+    display: inline;
+    float: left;
+    width: 0; 
+    height: 0; 
+    margin: 3px;
+    margin-right: 10px;
+    border-top: calc(6pt*.866) solid transparent;
+    border-bottom: calc(6pt*.866) solid transparent;
+    border-left: 6pt solid var(--menu-item-color);
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
 .menu-item-name {
     float: left;
 }
@@ -203,4 +217,9 @@ header:after {
 
 .menu-item.active .menu-item-image {
     opacity: 100%;
+}
+
+.menu-item.active .arrow {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
 }
